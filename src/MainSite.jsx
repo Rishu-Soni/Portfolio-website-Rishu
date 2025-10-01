@@ -1,36 +1,7 @@
-// function MainPage() {
-//     return(
-//         <>
-//         <main>
-//       <div className="projects-page">
-//         <h2>Projects</h2>
-//         <div className="project-cards"></div>
-//       </div>
-
-//       <div className="contact-page-container">
-//         <div className="contact-page">
-//           <h2>Contact Me</h2>
-//           <p>
-//             {" "}
-//             <a href="mailto:rishusoni6393@gmail.com">Email: </a>
-//           </p>
-//         </div>
-//         <table className="social-media-table">
-//           <thead>Social Media</thead>
-//           <tr>LinkedIn</tr>
-//           <tr>GitHub</tr>
-//           <tr>Twitter</tr>
-//         </table>
-//       </div>
-//     </main>
-//     </>
-//     )
-// }
-
-// export default MainPage;
-
 import { useState, useEffect } from "react";
+import "./ProjectCard.jsx";
 import "./assets/CSS/MainSite.css";
+import ProjectCard from "./ProjectCard.jsx";
 
 const frontendSkills = [
   {
@@ -112,7 +83,7 @@ function MainSite() {
   const [experienceBarValue, setExperienceBarValue] = useState(85);
   const [experienceBarAbout, setExperienceBarAbout] = useState("");
   const [further_exp_visibility, setFurther_exp_visibility] =
-    useState("hidden");
+    useState("invisible");
   const [mousehoveredSkill, setMousehoveredSkill] = useState(null);
 
   useEffect(() => {
@@ -223,6 +194,7 @@ function MainSite() {
 
         <div className="projects-page">
           <h2>PROJECTS</h2>
+          <ProjectCard />
           <div className="project-cards"></div>
         </div>
       </main>
