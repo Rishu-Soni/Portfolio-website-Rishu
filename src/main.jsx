@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import Navbar from "./Navbar.jsx";
 import MainSite from "./MainSite.jsx";
-import "./assets/CSS/navbar.css";
+import "./assets/CSS/Navbar.css";
 
 createRoot(document.getElementById("root")).render(
   <>
