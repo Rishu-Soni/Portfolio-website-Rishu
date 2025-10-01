@@ -1,4 +1,4 @@
-import "./assets/CSS/navbar.css";
+import "./assets/CSS/Navbar.css";
 import "./assets/Navbar_assets/rishu_logo.png";
 import "./assets/Navbar_assets/rishu_logo.png";
 function Navbar() {
