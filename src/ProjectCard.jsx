@@ -61,22 +61,3 @@ function ProjectCard({
 }
 
 export default ProjectCard;
-// <div className="projectCard">
-//     <img src={image} alt={title} className="projectImage" />
-//     <div className="projectContent">
-//         <h3 className="projectTitle">{title}</h3>
-//         <p className="projectDescription">{description}</p>
-//         <div className="projectLinks">
-//             {githubLink && (
-//                 <a href={githubLink} target="_blank" rel="noopener noreferrer" className="projectLink">
-//                     GitHub
-//                 </a>
-//             )}
-//             {link && (
-//                 <a href={link} target="_blank" rel="noopener noreferrer" className="projectLink">
-//                     Live Demo
-//                 </a>
-//             )}
-//         </div>
-//     </div>
-// </div>
