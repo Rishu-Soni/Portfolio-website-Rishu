@@ -208,6 +208,22 @@ background-color: #11eb9b;
 
 
 /* Projects page */
+.Project_heading{
+  font-family: "Courier New", Courier, monospace;
+  color: #303030;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 4rem;
+  margin-bottom: 24px;
+}
+.Project_heading:hover {
+  color: #11eb9b;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 5px;
+  text-decoration-color: #11eb9b;
+  transition: all 0.3s ease;
+}
 .project-cards {
   display: flex;
   flex-wrap: wrap;
@@ -216,8 +232,42 @@ background-color: #11eb9b;
   padding: 20px;
 }
 
-
-
+/* contact page */
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+.contact-heading {
+  font-family: "Courier New", Courier, monospace;
+  color: #303030;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 4rem;
+  margin-bottom: 24px;
+}
+.contact-heading:hover {
+  color: #11eb9b;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 5px;
+  text-decoration-color: #11eb9b;
+  transition: all 0.3s ease;
+}
+.contact-para {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+.contact_logo{
+  width: 150px;
+  height: 150px;
+  margin: 40px 10vw;
+}
 
 @media (max-width: 768px) {
   .first-page {
