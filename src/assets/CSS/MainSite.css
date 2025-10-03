@@ -207,6 +207,16 @@ background-color: #11eb9b;
 }
 
 
+/* Projects page */
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+
 
 
 @media (max-width: 768px) {

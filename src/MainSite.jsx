@@ -193,8 +193,20 @@ function MainSite() {
         </div>
 
         <div className="projects-page">
+          {/*
+  path = "",
+  image = "https://static.vecteezy.com/system/resources/thumbnails/005/720/408/small_2x/crossed-image-icon-picture-not-available-delete-picture-symbol-free-vector.jpg",
+  title = "Latest Project",
+  description = "This Project is under development now, but will available soon.",
+  githubLink = "https://github.com/Rishu-Soni", */}
+
           <h2>PROJECTS</h2>
-          <ProjectCard />
+          <div className="project-cards">
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+          </div>
           <div className="project-cards"></div>
         </div>
       </main>

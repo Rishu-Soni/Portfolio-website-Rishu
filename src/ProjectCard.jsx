@@ -15,29 +15,25 @@ function ProjectCard({
   githubLink = "https://github.com/Rishu-Soni",
 }) {
   const [isHovered, setIsHovered] = useState(false);
+
+
+
+
+
   return (
     <div
       className="projectCard"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {/* isHovered ? (e)=>{document.getElementById(".ProjectTextContainer").innerHTML=""} */}
       <div className="projectImageContainer">
         <img src={image} alt={title} className="projectImage" />
-      </div>
-      <div className="projectContent">
+      </div> 
+      <div id="ProjectTextContainer" className="projectContent" >
         <h3 className="projectTitle">{title}</h3>
         <p className="projectDescription">{description}</p>
         <div className="projectLinks">
-          {githubLink && (
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="projectLink"
-            >
-              GitHub
-            </a>
-          )}
           {path && (
             <a
               href={path}
@@ -46,6 +42,16 @@ function ProjectCard({
               className="projectLink"
             >
               Live Demo
+            </a>
+          )}
+          {githubLink && (
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="projectLink"
+            >
+              GitHub
             </a>
           )}
         </div>
