@@ -33,7 +33,7 @@ function ProjectCard({
       <div id="ProjectTextContainer" className="projectContent" >
         <h3 className="projectTitle">{title}</h3>
         <p className="projectDescription">{description}</p>
-        <div className="projectLinks">
+        <div className="projectLink_container">
           {path && (
             <a
               href={path}

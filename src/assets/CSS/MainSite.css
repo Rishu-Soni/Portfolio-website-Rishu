@@ -11,14 +11,22 @@ body {
 main {
   width: 100vw;
 }
-.table_para:hover,
-a:hover {
-  transform: scale(1.2);
-    color: #00ffeac7;
+.heading2 {
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+  color: #303030;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 4rem;
+  margin-bottom: 24px;
+}
+.heading2:hover {
+  color: #11eb9b;
   text-decoration: underline;
-  text-underline-offset: 5px;
-  text-decoration-thickness: 3px;
-  text-decoration-color: #00ffeac7;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 5px;
+  text-decoration-color: #11eb9b;
+  transition: all 0.3s ease;
 }
 
 /* first page section */
@@ -97,22 +105,6 @@ a:hover {
   text-align: center;
   padding: 0 20px;
 }
-.experience-page h2 {
-  font-family: "Courier New", Courier, monospace;
-  color: #303030;
-  font-weight: 900;
-  letter-spacing: 2px;
-  font-size: 4rem;
-  margin-bottom: 24px;
-}
-.experience-page h2:hover {
-  color: #11eb9b;
-  text-decoration: underline;
-  text-underline-offset: 8px;
-  text-decoration-thickness: 5px;
-  text-decoration-color: #11eb9b;
-  transition: all 0.3s ease;
-}
 .table_div {
   width: 700px;
   /* height: 215px; */
@@ -165,7 +157,7 @@ a:hover {
   padding-bottom: 10px;
   z-index: 1;
 }
-.Exp_small_text{
+.Exp_small_text {
   font-size: 0.9rem;
   font-weight: 500;
   margin-top: 10px;
@@ -176,60 +168,56 @@ a:hover {
   box-shadow: 2px 2px 25px #11eb9b, -2px -2px 25px #00ffeae0;
   transition: all 0.3s ease;
 }
-.experience_exp_Container{
+.experience_exp_Container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.experience_exp_Container h3{
+.experience_exp_Container h3 {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 20px 0 5px 0;
   padding-bottom: 10px;
 }
-.furtherExp_text{
-  padding :0 10%;
+.furtherExp_text {
+  padding: 0 10%;
   margin-top: 10px;
   font-size: 1.1rem;
   font-weight: 500;
 }
-.furtherExp_outerBar{
+.furtherExp_outerBar {
   width: 40vw;
   height: 12px;
   border-radius: 15px;
   background-color: #d3d3d3;
 }
-.furtherExp_innerBar{
-height: inherit;
-border-radius: 15px;
-background-color: #11eb9b;
-/* 00ffeae0 */
+.furtherExp_innerBar {
+  height: inherit;
+  border-radius: 15px;
+  background-color: #11eb9b;
+  /* 00ffeae0 */
 }
-
 
 /* Projects page */
-.Project_heading{
-  font-family: "Courier New", Courier, monospace;
-  color: #303030;
-  font-weight: 900;
-  letter-spacing: 2px;
-  font-size: 4rem;
-  margin-bottom: 24px;
+.project_heading{
+  text-align: center;
+  margin: 40px 0 20px 0;
 }
-.Project_heading:hover {
-  color: #11eb9b;
-  text-decoration: underline;
-  text-underline-offset: 8px;
-  text-decoration-thickness: 5px;
-  text-decoration-color: #11eb9b;
-  transition: all 0.3s ease;
-}
-.project-cards {
+.project-card_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
+}
+.project-card{
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* contact page */
@@ -243,14 +231,6 @@ background-color: #11eb9b;
   text-align: center;
   padding: 0 20px;
 }
-.contact-heading {
-  font-family: "Courier New", Courier, monospace;
-  color: #303030;
-  font-weight: 900;
-  letter-spacing: 2px;
-  font-size: 4rem;
-  margin-bottom: 24px;
-}
 .contact-heading:hover {
   color: #11eb9b;
   text-decoration: underline;
@@ -263,10 +243,36 @@ background-color: #11eb9b;
   font-size: 1.2rem;
   margin: 20px 0;
 }
-.contact_logo{
-  width: 150px;
-  height: 150px;
-  margin: 40px 10vw;
+.contact_logo {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+}
+.contact_logo:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+
+footer {
+  margin-top: 50px;
+  height: 200px;
+  margin-top: 96px;
+  text-align: center;
+  background-color: #303030;
+  color: #fbfcf8;
+  font-size: 1rem;
+}
+.footer_div{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer-para {
+  padding: 10px;
 }
 
 @media (max-width: 768px) {
@@ -291,5 +297,16 @@ background-color: #11eb9b;
   }
   .start-button {
     margin: 0;
+  }
+}
+
+@keyframes Project_apearFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

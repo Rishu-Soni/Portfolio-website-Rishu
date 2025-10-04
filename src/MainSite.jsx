@@ -107,7 +107,6 @@ function MainSite() {
     <>
       <main>
         {/* first page of the portfolio */}
-
         <div className="first-page">
           <img
             className="main-img"
@@ -127,7 +126,7 @@ function MainSite() {
 
         {/* experience page of the portfolio */}
         <div className="experience-page">
-          <h2>EXPERIENCES</h2>
+          <h2 className="heading2">EXPERIENCES</h2>
 
           <div className="table_div">
             <div className="table_content">
@@ -200,15 +199,18 @@ function MainSite() {
         {/* projects page of the portfolio */}
         <div className="projects-page">
           {/*
-  path = "",
-  image = "https://static.vecteezy.com/system/resources/thumbnails/005/720/408/small_2x/crossed-image-icon-picture-not-available-delete-picture-symbol-free-vector.jpg",
-  title = "Latest Project",
-  description = "This Project is under development now, but will available soon.",
-  githubLink = "https://github.com/Rishu-Soni", */}
-
-          <h2 className="Project_heading">PROJECTS</h2>
-          <div className="project-cards">
+            path = "",
+            image = "https://static.vecteezy.com/system/resources/thumbnails/005/720/408/small_2x/crossed-image-icon-picture-not-available-delete-picture-symbol-free-vector.jpg",
+            title = "Latest Project",
+            description = "This Project is under development now, but will available soon.",
+            githubLink = "https://github.com/Rishu-Soni",
+          */}
+          <div className="project_heading">
+            <h2 className="heading2">PROJECTS</h2>
+          </div>
+          <div className="project-card_container">
             <ProjectCard
+              className="project-card"
               path="https://chess-rishu.netlify.app/"
               image={chessImage}
               title="Chess Game"
@@ -216,6 +218,7 @@ function MainSite() {
               githubLink="https://github.com/Rishu-Soni/SideProject_Chess-Rishu.git"
             />
             <ProjectCard
+              className="project-card"
               path="https://calculator-rishu.netlify.app/"
               image={CalculatorImage}
               title="Calculator App"
@@ -223,35 +226,52 @@ function MainSite() {
               githubLink="https://github.com/Rishu-Soni/SideProject_Calculator-Rishu.git"
             />
             <ProjectCard
+              className="project-card"
               path="https://todo-rishu.netlify.app/"
               image={ToDoImage}
               title="To Do List App"
               description="Have you ever thing about a ToDo list which Can store your task in your browser locally."
               githubLink="https://github.com/Rishu-Soni/SideProject_ToDo_List-Rishu.git"
             />
-            <ProjectCard />
-            <ProjectCard />
+            <ProjectCard className="project-card" />
+            <ProjectCard className="project-card" />
           </div>
         </div>
 
         {/* contact page of the portfolio */}
-        <div className="contact-page">
-          <h2 className="contact-heading">CONTACT</h2>
+        {/* <div className="contact-page">
+          <h2 className="heading2">CONTACT</h2>
 
           <p className="contact-para">
             Feel free to reach out for collaborations or just a friendly hello.!
           </p>
 
-          <p className="contact-para">
+          <p className="contact-para"></p>
+        </div> */}
+      </main>
+      <footer>
+        <div className="footer_div">
+          <div>
             <a href="mailto:rishusoni6393@gmail.com" className="email-link">
               <img className="contact_logo" src={Mail_image} alt="Mail_logo" />
             </a>
-            <a href="https://t.me/Rs_8_telegram_group" target="_blank" rel="noopener noreferrer">
-              <img className="contact_logo" src={Tele_image} alt="Telegram_logo" />
+            <a
+              href="https://t.me/Rs_8_telegram_group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="contact_logo"
+                src={Tele_image}
+                alt="Telegram_logo"
+              />
             </a>
-          </p>
+          </div>
         </div>
-      </main>
+        <p className="footer-para">
+          &copy; 2025 Rishu Soni. All rights reserved.
+        </p>
+      </footer>
     </>
   );
 }
