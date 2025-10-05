@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard.jsx";
 import chessImage from "./assets/Project_Assets/chess-Rishu.png";
 import CalculatorImage from "./assets/Project_Assets/Calculator-Rishu.png";
 import ToDoImage from "./assets/Project_Assets/ToDo_list-Rishu.png";
-import Mail_image from "./assets/Contact_Assets/Mail_image.png";
+import Mail_image from "./assets/Contact_Assets/mail_image.png";
 import Tele_image from "./assets/Contact_Assets/Telegram_logo.webp";
 
 const frontendSkills = [
