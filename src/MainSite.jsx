@@ -114,11 +114,10 @@ function MainSite() {
             alt="index"
           />
           <div className="first_page_text_side">
-            <h2>
-              Welcome to my <p className="portfolio">PORTFOLIO</p>
-            </h2>
+            <h2>RISHU's</h2>
+            <p className="portfolio">PORTFOLIO</p>
             <p className="para_page_first">
-              This is a simple portfolio website built using React.
+              This is a simple portfolio site of ME and also built by ME.
             </p>
             <button className="start-button">Get Started</button>
           </div>
@@ -131,7 +130,7 @@ function MainSite() {
           <div className="table_div">
             <div className="table_content">
               <h3 className="h3_text">Front-end</h3>
-              <ul>
+              <ul className="skills_ul">
                 {frontendSkills.map((skill, index) => (
                   <li key={index} className="skills_list">
                     <strong
@@ -156,7 +155,7 @@ function MainSite() {
 
             <div className="table_content">
               <h3 className="h3_text">Coding Languages</h3>
-              <ul>
+              <ul className="skills_ul">
                 {codingLanguages.map((skill, index) => (
                   <li key={index} className="skills_list">
                     <strong
@@ -187,10 +186,16 @@ function MainSite() {
             className="experience_exp_Container"
             style={{ visibility: further_exp_visibility }}
           >
-            <h3>Further Explanation</h3>
             {/* <progress className="furtherExp_bar" value={experienceBarValue} max="100"></progress> */}
-            <div className="furtherExp_outerBar">
-              <div className="furtherExp_innerBar" style={ProgressBar_value} />
+            <div className="furtherExp_barContainer">
+              <h3>Skill Proficiency</h3>
+              <div className="furtherExp_outerBar">
+                <div className="furtherExp_innerBar" style={ProgressBar_value}>
+                  {/* <div className="furtherExp_innerBar_color"/> */}
+                  <span>{experienceBarValue}%</span>
+                  {/* <div className="furtherExp_innerBar_color"/> */}
+                </div>
+              </div>
             </div>
             <label className="furtherExp_text">{experienceBarAbout}</label>
           </div>
