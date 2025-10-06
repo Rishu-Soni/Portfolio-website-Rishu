@@ -5,7 +5,6 @@ import ProjectCard from "./ProjectCard.jsx";
 import chessImage from "./assets/Project_Assets/chess-Rishu.png";
 import CalculatorImage from "./assets/Project_Assets/Calculator-Rishu.png";
 import ToDoImage from "./assets/Project_Assets/ToDo_list-Rishu.png";
-<<<<<<< HEAD
 import Mail_image from "./assets/Contact_Assets/Mail_image.png";
 import Tele_image from "./assets/Contact_Assets/Telegram_logo.png";
 import Github_image from "./assets/Contact_Assets/github_image.png";
@@ -13,10 +12,6 @@ import Linkedin_image from "./assets/Contact_Assets/linkedin_image.png";
 import X_image from "./assets/Contact_Assets/twitter_image.png";
 import About_Section from "./About_Section.jsx";
 import Coder_shadow from "./assets/About_assets/coder_shadow_img.png";
-=======
-import Mail_image from "./assets/Contact_Assets/mail_image.png";
-import Tele_image from "./assets/Contact_Assets/Telegram_logo.webp";
->>>>>>> ebdef48565868e22c32206e5bdaf20ab79066899
 
 const frontendSkills = [
   {
