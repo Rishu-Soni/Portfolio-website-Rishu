@@ -6,7 +6,12 @@ import chessImage from "./assets/Project_Assets/chess-Rishu.png";
 import CalculatorImage from "./assets/Project_Assets/Calculator-Rishu.png";
 import ToDoImage from "./assets/Project_Assets/ToDo_list-Rishu.png";
 import Mail_image from "./assets/Contact_Assets/Mail_image.png";
-import Tele_image from "./assets/Contact_Assets/Telegram_logo.webp";
+import Tele_image from "./assets/Contact_Assets/Telegram_logo.png";
+import Github_image from "./assets/Contact_Assets/github_image.png";
+import Linkedin_image from "./assets/Contact_Assets/linkedin_image.png";
+import X_image from "./assets/Contact_Assets/twitter_image.png";
+import About_Section from "./About_Section.jsx";
+import Coder_shadow from "./assets/About_assets/coder_shadow_img.png";
 
 const frontendSkills = [
   {
@@ -215,7 +220,6 @@ function MainSite() {
           </div>
           <div className="project-card_container">
             <ProjectCard
-              className="project-card"
               path="https://chess-rishu.netlify.app/"
               image={chessImage}
               title="Chess Game"
@@ -223,7 +227,6 @@ function MainSite() {
               githubLink="https://github.com/Rishu-Soni/SideProject_Chess-Rishu.git"
             />
             <ProjectCard
-              className="project-card"
               path="https://calculator-rishu.netlify.app/"
               image={CalculatorImage}
               title="Calculator App"
@@ -231,46 +234,92 @@ function MainSite() {
               githubLink="https://github.com/Rishu-Soni/SideProject_Calculator-Rishu.git"
             />
             <ProjectCard
-              className="project-card"
               path="https://todo-rishu.netlify.app/"
               image={ToDoImage}
               title="To Do List App"
               description="Have you ever thing about a ToDo list which Can store your task in your browser locally."
               githubLink="https://github.com/Rishu-Soni/SideProject_ToDo_List-Rishu.git"
             />
-            <ProjectCard className="project-card" />
-            <ProjectCard className="project-card" />
+            <ProjectCard />
+            <ProjectCard />
           </div>
         </div>
 
-        {/* contact page of the portfolio */}
-        {/* <div className="contact-page">
-          <h2 className="heading2">CONTACT</h2>
-
-          <p className="contact-para">
-            Feel free to reach out for collaborations or just a friendly hello.!
+        <div className="about-page">
+          <h2 className="heading2">About ME</h2>
+          <p className="about-para">
+            <About_Section
+              heading="Who am I?"
+              imgClass="coder_shadow"
+              image_alt="coder_shadow"
+              image_src={Coder_shadow}
+              discription_para="I am Rishu, currently a first year student pursuing B.Tech in CSE in AI at kiet Ghaziabad. I have a strong passion for coding and development."
+            />
           </p>
-
-          <p className="contact-para"></p>
-        </div> */}
+        </div>
       </main>
       <footer>
         <div className="footer_div">
-          <div>
-            <a href="mailto:rishusoni6393@gmail.com" className="email-link">
-              <img className="contact_logo" src={Mail_image} alt="Mail_logo" />
-            </a>
-            <a
-              href="https://t.me/Rs_8_telegram_group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="contact_logo"
-                src={Tele_image}
-                alt="Telegram_logo"
-              />
-            </a>
+          <div className="otherRelatedLinks">
+            {/* <h2 className="contact_heading">Other Links</h2> */}
+          </div>
+          <div className="footer_contact">
+            <div className="contact_div">
+              <a
+                href="https://www.linkedin.com/in/rishu-soni-207694325/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="otherLinks"
+              >
+                <img
+                  src={Linkedin_image}
+                  alt=""
+                  className="contact_logo blackLogo"
+                />
+              </a>
+              <a
+                href="https://x.com/_R_s_8_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="otherLinks"
+              >
+                <img src={X_image} alt="" className="contact_logo blackLogo" />
+              </a>
+              <a
+                href="https://github.com/Rishu-Soni"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="otherLinks"
+              >
+                <img
+                  src={Github_image}
+                  alt=""
+                  className="contact_logo blackLogo"
+                />
+              </a>
+              <a href="mailto:rishusoni6393@gmail.com" className="email-link">
+                <img
+                  className="contact_logo mail"
+                  src={Mail_image}
+                  alt="Mail_logo"
+                />
+              </a>
+              <a
+                href="https://t.me/Rs_8_telegram_group"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className="contact_logo tele"
+                  src={Tele_image}
+                  alt="Telegram_logo"
+                />
+              </a>
+              <p className="contact-para">
+                Feel free to reach out for collaborations or just a friendly
+                hello.!
+              </p>
+            </div>
           </div>
         </div>
         <p className="footer-para">

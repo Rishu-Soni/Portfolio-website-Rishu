@@ -8,7 +8,9 @@
   --primary-color: hsl(150, 80%, 55%);
   --secondary-color: hsl(175, 90%, 50%);
   --text-color-heading: hsl(0, 0%, 5%);
+  --text-color-heading-inverse: hsl(0, 0%, 90%);
   --text-color-para: hsl(0, 0%, 30%);
+  --text-color-para-inverse: hsl(0, 0%, 80%);
   --background-color-back: hsl(0, 0%, 90%);
   --background-color-normal: hsl(0, 0%, 95%);
   --background-color-front: hsl(0, 0%, 100%);
@@ -26,6 +28,10 @@ main {
   width: 100vw;
 }
 .heading2 {
+  background-color: var(--background-color-normal);
+  padding: 12px 40px;
+  box-shadow: -2px -2px 5px var(--shadow-light), 2px 2px 5px var(--shadow-dark);
+  border-radius: 30px;
   display: inline-block;
   font-family: "Courier New", Courier, monospace;
   color: var(--text-color-heading);
@@ -54,17 +60,11 @@ main {
   text-align: center;
 }
 .first_page_text_side {
-  background-color: var(--background-color-normal);
-  border-radius: 20px;
   padding: 20px;
-  box-shadow: inset -2px -2px 5px var(--shadow-light),
-    inset 2px 2px 5px var(--shadow-dark);
-  display: inline-block;
   margin-left: 3vw;
   text-align: center;
 }
 .portfolio {
-  display: inline-block;
   font-family: "Courier New", Courier, monospace;
   color: var(--text-color-heading);
   font-weight: 900;
@@ -80,7 +80,6 @@ main {
   transition: color 0.3s ease;
 }
 .para_page_first {
-  display: inline-block;
   font-size: 1.1rem;
   margin-bottom: 8px;
   color: var(--text-color-para);
@@ -114,15 +113,16 @@ main {
   transition: background-color 0.3s ease;
 }
 .start-button:hover {
-  box-shadow: -5px -5px 5px var(--shadow-light), 5px 5px 5px var(--shadow-dark);
+  box-shadow: 4px 4px 20px var(--primary-color),
+    -1px -1px 5px var(--secondary-color);
   transform: translateY(-3px) scale(1.03);
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }
 .start-button:active {
   transform: scale(1);
 }
 
-/* Responsive Design */
+/* exp Design */
 .experience-page {
   scroll-snap-align: start;
   transition: transform 0.3s ease;
@@ -148,8 +148,7 @@ main {
   width: 50%;
   padding: 0 10px 10px 10px;
   background-color: var(--background-color-normal);
-  box-shadow: -2px -2px 5px var(--shadow-light),
-    2px 2px 5px var(--shadow-dark);
+  box-shadow: -2px -2px 5px var(--shadow-light), 2px 2px 5px var(--shadow-dark);
   margin: auto;
   border-radius: 10px;
   text-align: center;
@@ -157,7 +156,7 @@ main {
   font-size: 1.2rem;
   font-weight: 550;
 }
-.skills_ul{
+.skills_ul {
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -184,7 +183,7 @@ main {
   box-shadow: -1px -1px 10px var(--primary-color),
     3px 3px 10px var(--shadow-dark);
   transform: scale(1.1);
-  transition:  0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .skills:hover {
   color: #11eb9b;
@@ -212,8 +211,7 @@ main {
 }
 .table_content:hover {
   transform: scale(1.02) translateY(-10px);
-  box-shadow: -5px -5px 8px var(--shadow-light),
-    5px 5px 8px var(--shadow-dark);
+  box-shadow: -5px -5px 8px var(--shadow-light), 5px 5px 8px var(--shadow-dark);
   transition: all 0.3s ease;
 }
 .experience_exp_Container {
@@ -225,7 +223,7 @@ main {
   justify-content: center;
   background-color: var(--background-color-normal);
   border-radius: 20px;
-  box-shadow:inset -2px -2px 5px var(--shadow-light),
+  box-shadow: inset -2px -2px 5px var(--shadow-light),
     inset 2px 2px 5px var(--shadow-dark);
 }
 .experience_exp_Container h3 {
@@ -238,7 +236,7 @@ main {
   font-size: 1.1rem;
   font-weight: 500;
 }
-.furtherExp_barContainer{
+.furtherExp_barContainer {
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -265,8 +263,7 @@ main {
   height: 12px;
   border-radius: 15px;
   background-color: #11eb9b;
-  box-shadow: 2px 2px 2px var(--shadow-dark),
-    -2px -2px 2px var(--shadow-light);
+  box-shadow: 2px 2px 2px var(--shadow-dark), -2px -2px 2px var(--shadow-light);
 }
 /* .furtherExp_innerBar_color {
   display: inline-block;
@@ -278,6 +275,16 @@ main {
 } */
 
 /* Projects page */
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding: 20px;
+}
 .project_heading {
   text-align: center;
   margin: 40px 0 20px 0;
@@ -289,53 +296,42 @@ main {
   gap: 20px;
   padding: 20px;
 }
-.project-card {
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-/* contact page */
-.contact-page {
+/* about page */
+.about-page {
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   text-align: center;
   padding: 0 20px;
 }
-.contact-heading:hover {
-  color: #11eb9b;
-  text-decoration: underline;
-  text-underline-offset: 8px;
-  text-decoration-thickness: 5px;
-  text-decoration-color: #11eb9b;
-  transition: all 0.3s ease;
-}
-.contact-para {
-  font-size: 1.2rem;
+.about-para {
+  font-size: 1.1rem;
+  color: var(--text-color-para);
   margin: 20px 0;
+  line-height: 28px;
+  font-weight: 500;
+  text-align: center;
 }
-.contact_logo {
-  width: 80px;
-  height: 80px;
+.coder_shadow {
+  display: relative;
+  justify-self: flex-end;
+  align-self: flex-end;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
   margin: 10px;
-}
-.contact_logo:hover {
-  transform: scale(1.2);
-  transition: all 0.3s ease;
+  filter: hue-rotate(300deg) saturate(2) brightness(0.9);
 }
 
+/* footer page */
+
 footer {
-  margin-top: 50px;
-  height: 200px;
-  margin-top: 96px;
+  height: 30vh;
   text-align: center;
   background-color: #303030;
   color: #fbfcf8;
@@ -347,10 +343,45 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 .footer-para {
   padding: 10px;
+}
+.footer_contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contact_logo {
+  width: 50px;
+  height: 50px;
+  margin: 30px;
+}
+.contact_logo:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+.mail {
+  filter: invert(0.5) brightness(1);
+}
+.tele {
+  filter: saturate(0) brightness(1);
+}
+.blackLogo {
+  filter: invert(0.5) brightness(1);
+}
+.contact_heading {
+  color: var(--text-color-heading-inverse);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.contact-para {
+  font-size: 0.8rem;
+  color: var(--text-color-para-inverse);
+  font-weight: 500;
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
