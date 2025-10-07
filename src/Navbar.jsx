@@ -1,12 +1,13 @@
 import "./assets/CSS/Navbar.css";
 import "./assets/Navbar_assets/rishu_logo.png";
 import "./assets/Navbar_assets/rishu_logo.png";
+import Rs_logo from "./assets/Index_Assets/R-s_Logo.png";
 function Navbar() {
   return (
       <nav className="navbar">
         <div className="logoContainer">
           <img
-            src="https://imgv3.fotor.com/images/videoImage/wonderland-girl-generated-by-Fotor-ai-art-generator.jpg"
+            src={Rs_logo}
             alt="Portfolio-Logo"
             className="logoImage"
           />

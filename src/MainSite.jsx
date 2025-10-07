@@ -12,6 +12,7 @@ import Linkedin_image from "./assets/Contact_Assets/linkedin_image.png";
 import X_image from "./assets/Contact_Assets/twitter_image.png";
 import About_Section from "./About_Section.jsx";
 import Coder_shadow from "./assets/About_assets/coder_shadow_img.png";
+import Rishu_img from "./assets/Index_Assets/me_Img.jpg";
 
 const frontendSkills = [
   {
@@ -115,8 +116,8 @@ function MainSite() {
         <div className="first-page">
           <img
             className="main-img"
-            src="https://productio.com/wp-content/uploads/2021/10/img1wp.jpg"
-            alt="index"
+            src={Rishu_img}
+            alt="Rishu_Soni"
           />
           <div className="first_page_text_side">
             <h2>RISHU's</h2>
