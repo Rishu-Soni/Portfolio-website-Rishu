@@ -114,11 +114,7 @@ function MainSite() {
       <main>
         {/* first page of the portfolio */}
         <div className="first-page">
-          <img
-            className="main-img"
-            src={Rishu_img}
-            alt="Rishu_Soni"
-          />
+          <img className="main-img" src={Rishu_img} alt="Rishu_Soni" />
           <div className="first_page_text_side">
             <h2>RISHU's</h2>
             <p className="portfolio">PORTFOLIO</p>
@@ -158,7 +154,6 @@ function MainSite() {
                 ))}
               </ul>
             </div>
-
             <div className="table_content">
               <h3 className="h3_text">Coding Languages</h3>
               <ul className="skills_ul">

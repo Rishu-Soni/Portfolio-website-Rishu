@@ -1,48 +1,57 @@
-.navbar{
-    background-color: var(--background-color-back);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+.navbar {
+  background-color: var(--background-color-back);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.logoImage{
-    padding: 2px;
-    border-radius: 50%;
-    background-color: var(--background-color-normal);
-    box-shadow: -5px -5px 5px var(--shadow-light), 5px 5px 5px var(--shadow-dark);
-    border: 2px solid var(--background-color-front);
-    height: 70px;
-    width: 70px;
-    margin: 0 30px 0 10px;
+.logoImage {
+  padding: 2px;
+  border-radius: 50%;
+  background-color: var(--background-color-normal);
+  box-shadow: -5px -5px 5px var(--shadow-light), 5px 5px 5px var(--shadow-dark);
+  border: 2px solid var(--background-color-front);
+  height: 70px;
+  width: 70px;
+  margin: 0 30px 0 10px;
 }
 
-.navbar h1{
-    font-size: 24px;
+.navbar h1 {
+  font-size: 24px;
 }
-.navLinks{
-    list-style: none;
-    display: flex;
-    gap: 40px;
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 40px;
 }
-.navLinks li a{
-    text-decoration: none;
-    color: #333333;
-    font-weight: 700;
-    font-size: 17px;
+.navLinks li a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 700;
+  font-size: 17px;
 }
-.navLinks li a:hover{
-    color: #00f59b;
-    transition: color 0.3s;
+.navLinks li a:hover {
+  color: #00f59b;
+  transition: color 0.3s;
 }
 
-.logoContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* margin: 20px; */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 20px; */
+}
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: 100%;
+  }
 }
