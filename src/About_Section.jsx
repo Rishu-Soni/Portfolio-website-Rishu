@@ -8,11 +8,15 @@ function About_Section({
 }) {
   return (
     <section className="about-section">
-      <div  className="about-text" >
-        <h2 className="about_heading" >{heading}</h2>
+      <div className="about-text_area">
+        <h2 className="about_heading">{heading}</h2>
+        <img
+          className={`about_Img ${imgClass}`}
+          src={image_src}
+          alt={image_alt}
+        />
         <p className="about-sec_para"> {discription_para}</p>
       </div>
-      <img className={imgClass} src={image_src} alt={image_alt} />
     </section>
   );
 }
