@@ -406,6 +406,13 @@ footer {
     letter-spacing: 1px;
     font-size: 3rem;
   }
+
+  .contact_logo {
+  width: 25px;
+  height: 25px;
+  margin: 0 20px 40px 20px;
+}
+
 }
 
 @keyframes Project_apearFromBottom {
