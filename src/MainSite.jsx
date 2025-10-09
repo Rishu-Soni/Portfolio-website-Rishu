@@ -13,6 +13,8 @@ import X_image from "./assets/Contact_Assets/twitter_image.png";
 import About_Section from "./About_Section.jsx";
 import Coder_shadow from "./assets/About_assets/coder_shadow_img.png";
 import Rishu_img from "./assets/Index_Assets/me_Img.jpg";
+import moon_icon from "./assets/Index_Assets/moon_icon.png";
+import sun_icon from "./assets/Index_Assets/sun_icon.svg";
 
 const frontendSkills = [
   {
@@ -96,6 +98,7 @@ function MainSite() {
   const [further_exp_visibility, setFurther_exp_visibility] =
     useState("invisible");
   const [mousehoveredSkill, setMousehoveredSkill] = useState(null);
+  const [ColorTheme, setColorTheme] = useState(false);
 
   useEffect(() => {
     handleMouseEnter(
@@ -106,12 +109,65 @@ function MainSite() {
     );
   }, [mousehoveredSkill]);
 
+  useEffect(()=>{ 
+    const root = document.documentElement;
+    if(ColorTheme) // dark theme 
+    {
+      root.style.setProperty('--text-color-heading', 'hsl(0, 0%, 100%)');
+      root.style.setProperty('--text-color-heading-inverse', 'hsl(0, 0%, 90%)');
+      root.style.setProperty('--text-color-para', 'hsl(0, 0%, 70%)');
+      root.style.setProperty('--text-color-para-inverse', 'hsl(0, 50%, 85%)');
+      root.style.setProperty('--background-color-back', 'hsl(0, 0%, 13%)');
+      root.style.setProperty('--background-color-normal', 'hsl(0, 0%, 17%)');
+      root.style.setProperty('--background-color-front', 'hsl(0, 0%, 27%)');
+      root.style.setProperty('--shadow-dark', 'hsl(0, 0%, 0%)');
+      root.style.setProperty('--shadow-light', 'hsl(0, 0%, 40%)');
+      root.style.setProperty('--navMenuIcon', '0.7');
+      
+      document.querySelector(".theme_innerBar").style.justifyContent = "flex-end";
+      document.querySelector(".theme_innerBar").style.backgroundColor = "var(--primary-color)";
+      document.querySelector(".theme_innerBar").style.marginLeft = "5px";
+      document.querySelector(".theme_innerBar").style.marginRight = "2px";
+      document.querySelector(".sun").style.display = "none";
+      document.querySelector(".moon").style.display = "inline-block";
+      
+    }
+    else{   // light theme
+      root.style.setProperty('--text-color-heading', 'hsl(0, 0%, 10%)');
+      root.style.setProperty('--text-color-heading-inverse', 'hsl(0, 0%, 90%)');
+      root.style.setProperty('--text-color-para', 'hsl(0, 0%, 20%)');
+      root.style.setProperty('--text-color-para-inverse', 'hsl(0, 0%, 80%)');
+      root.style.setProperty('--background-color-back', 'hsl(150, 10%, 90%)');
+      root.style.setProperty('--background-color-normal', 'hsl(150, 5%, 95%)');
+      root.style.setProperty('--background-color-front', 'hsl(0, 0%, 100%)');
+      root.style.setProperty('--shadow-dark', 'hsl(0, 0%, 70%)');
+      root.style.setProperty('--shadow-light', 'hsl(0, 0%, 100%)');
+      root.style.setProperty('--navMenuIcon', '0');
+      
+      document.querySelector(".theme_innerBar").style.justifyContent = "flex-start";
+      document.querySelector(".theme_innerBar").style.backgroundColor = "var(--secondary-color)";
+      document.querySelector(".theme_innerBar").style.marginLeft = "2px";
+      document.querySelector(".theme_innerBar").style.marginRight = "5px";
+      document.querySelector(".sun").style.display = "inline-block";
+      document.querySelector(".moon").style.display = "none";
+    }
+  },[ColorTheme]);
+
+
+
   const ProgressBar_value = {
     width: `${experienceBarValue}%`, // Change this value to set the progress
   };
   return (
     <>
       <main>
+        <div className="themeDiv">
+          <div className="theme_outerBar" onClick={()=>{setColorTheme(pre => !pre)}} >
+            <div className="theme_innerBar">
+            <img src={sun_icon} alt="" className="theme_image sun" />
+            <img src={moon_icon} alt="" className="theme_image moon" /></div>
+          </div>
+        </div>
         {/* first page of the portfolio */}
         <div className="first-page">
           <img className="main-img" src={Rishu_img} alt="Rishu_Soni" />
@@ -193,7 +249,7 @@ function MainSite() {
               <div className="furtherExp_outerBar">
                 <div className="furtherExp_innerBar" style={ProgressBar_value}>
                   {/* <div className="furtherExp_innerBar_color"/> */}
-                  <span>{experienceBarValue}%</span>
+                  <span className="innerBarText" >{experienceBarValue}%</span>
                   {/* <div className="furtherExp_innerBar_color"/> */}
                 </div>
               </div>

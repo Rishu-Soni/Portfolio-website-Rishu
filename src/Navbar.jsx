@@ -14,6 +14,8 @@ function Navbar() {
           <h1>Rishu's Portfolio</h1>
         </div>
 
+<div></div>
+
         <ul className="navLinks">
           <li>
             <a href="Portfolio_Rishu\index.html"> Home </a>

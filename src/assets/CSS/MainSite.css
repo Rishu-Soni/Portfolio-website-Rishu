@@ -7,9 +7,9 @@
 :root {
   --primary-color: hsl(150, 80%, 55%);
   --secondary-color: hsl(175, 90%, 50%);
-  --text-color-heading: hsl(0, 0%, 5%);
+  --text-color-heading: hsl(0, 0%, 10%);
   --text-color-heading-inverse: hsl(0, 0%, 90%);
-  --text-color-para: hsl(0, 0%, 30%);
+  --text-color-para: hsl(0, 0%, 20%);
   --text-color-para-inverse: hsl(0, 0%, 80%);
   --background-color-back: hsl(0, 0%, 90%);
   --background-color-normal: hsl(0, 0%, 95%);
@@ -17,6 +17,10 @@
   --button-text-color: hsl(150, 80%, 55%);
   --shadow-dark: hsl(0, 0%, 70%);
   --shadow-light: hsl(0, 0%, 100%);
+
+  --navMenuIcon : 0;
+
+  transition: all 0.3s ease-in-out;
 }
 body {
   background-color: var(--background-color-back);
@@ -47,6 +51,53 @@ main {
   text-decoration-thickness: 5px;
   text-decoration-color: var(--primary-color);
   transition: all 0.3s ease;
+}
+
+.themeDiv {
+  height: 7px;
+  width: 95vw;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.theme_outerBar {
+  display: flex;
+  align-items: center;
+  margin: 0 30px 0 0;
+  padding: 7px;
+  width: 70px;
+  height: 36px;
+  border-radius: 20px;
+  background-color: var(--background-color-front);
+  box-shadow: inset -2px -2px 3px var(--shadow-light),
+    inset 2px 2px 3px var(--shadow-dark);
+}
+.theme_innerBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  box-shadow: 3px 3px 4px var(--shadow-dark), -3px -3px 4px var(--shadow-light);
+  display: flex;
+  justify-content: start;
+}
+.theme_image {
+  background-color: var(--background-color-normal);
+  border-radius: 50%;
+  box-shadow: 3px 3px 4px var(--shadow-dark), -3px -3px 4px var(--shadow-light);
+  width: 25px;
+}
+.moon {
+  /* display: inline-block; */
+  display: none;
+}
+.sun {
+filter: hue-rotate(35deg) saturate(120%);
+  display: inline-block;
+  /* display: none; */
 }
 
 /* first page section */
@@ -93,7 +144,7 @@ main {
 .main-img {
   padding: 12px;
   background-color: var(--background-color-normal);
-  box-shadow: -5px -5px 5px var(--shadow-light), 5px 5px 5px var(--shadow-dark);
+  box-shadow: -3px -3px 5px var(--shadow-light), 3px 3px 5px var(--shadow-dark);
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -101,7 +152,7 @@ main {
   margin-bottom: 20px;
 }
 .start-button {
-  margin: 40px 0 0 60%;
+  margin: 10px 0 0 60%;
   padding: 10px 20px;
   background-color: var(--background-color-normal);
   color: var(--text-color-para);
@@ -110,11 +161,11 @@ main {
   font-size: 1.2rem;
   border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 .start-button:hover {
-  box-shadow: 4px 4px 20px var(--primary-color),
-    -1px -1px 5px var(--secondary-color);
+  box-shadow: 3px 3px 5px var(--primary-color),
+    -2px -2px 10px var(--secondary-color);
   transform: translateY(-3px) scale(1.03);
   transition: all 0.5s ease;
 }
@@ -230,14 +281,13 @@ main {
 }
 .furtherExp_text {
   padding: 0 10%;
-  /* margin-top: 10px; */
   font-size: 1.1rem;
   font-weight: 500;
 }
 .furtherExp_barContainer {
   display: flex;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -247,7 +297,7 @@ main {
   display: flex;
   align-items: center;
   padding: 10px;
-  width: 70%;
+  width: 80%;
   height: 28px;
   border-radius: 15px;
   background-color: var(--background-color-front);
@@ -262,6 +312,11 @@ main {
   border-radius: 15px;
   background-color: #11eb9b;
   box-shadow: 2px 2px 2px var(--shadow-dark), -2px -2px 2px var(--shadow-light);
+}
+.innerBarText{
+  font-weight: 700;
+  font-size: 18px;
+  color: hsl(0, 0%, 15%);
 }
 /* .furtherExp_innerBar_color {
   display: inline-block;
@@ -408,11 +463,10 @@ footer {
   }
 
   .contact_logo {
-  width: 25px;
-  height: 25px;
-  margin: 0 20px 40px 20px;
-}
-
+    width: 25px;
+    height: 25px;
+    margin: 0 20px 4a0px 20px;
+  }
 }
 
 @keyframes Project_apearFromBottom {
