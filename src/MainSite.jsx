@@ -292,8 +292,6 @@ function MainSite() {
               description="Have you ever thing about a ToDo list which Can store your task in your browser locally."
               githubLink="https://github.com/Rishu-Soni/SideProject_ToDo_List-Rishu.git"
             />
-            <ProjectCard />
-            <ProjectCard />
           </div>
         </div>
 
